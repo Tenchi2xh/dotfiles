@@ -1,0 +1,16 @@
+{
+    "patterns": {
+        "TODO": "TODO[\\s]*?:[\\s]*(?P<todo>.*)$",
+        "FIXME": "FIXME[\\s]*?:[\\s]*(?P<fixme>.*)$"
+    },
+    "exclude_folders": [
+        ".venv*",
+        "*.*_cache*",
+        "*node_modules*",
+        "build*",
+        "cache*",
+        "resources*",
+    ],
+    "render_folder_depth": 5,
+    "resolve_symlinks": false,
+}

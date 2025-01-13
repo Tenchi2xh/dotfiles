@@ -1,0 +1,11 @@
+// SublimeLinter Settings - User
+{
+    "linters": {
+        "mypy": {
+            "disable": true
+        },
+        "flake8": {
+            "disable": true
+        }
+    }
+}

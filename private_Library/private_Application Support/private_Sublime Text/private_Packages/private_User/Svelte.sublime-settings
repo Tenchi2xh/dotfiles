@@ -1,0 +1,6 @@
+// These settings override both User and Default settings for the Svelte syntax
+{
+    "rulers": [
+        80, 100
+    ]
+}

@@ -1,0 +1,23 @@
+[user]
+    name = Hamza Haiken
+    email = tenchi@team2xh.net
+
+[core]
+    pager = delta
+
+[color]
+    ui = always
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+  syntax-theme = Monokai Extended Bright
+  line-numbers = true
+
+[push]
+    default = simple
+
+[alias]
+    lg = log --color --graph --pretty=format:'%Cgreen%h%Creset -%C(cyan)%d%Creset %s %C(bold blue)(%cr)%Creset %C(magenta)<%an>%Creset' --abbrev-commit
+    sdiff = diff --staged

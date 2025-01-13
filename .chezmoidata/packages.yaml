@@ -1,0 +1,111 @@
+packages:
+  darwin:
+    brews:
+    - git
+    - git-delta
+    - bitwarden-cli
+    - python
+    - wget
+
+    casks:
+    # Apps
+    - affinity-designer
+    - affinity-photo
+    - audacity
+    - bitwarden
+    - blender
+    - discord
+    - firefox
+    - hex-fiend
+    - iina
+    - inkscape
+    - intellij-idea-ce
+    - iterm2
+    - katrain
+    - majsoul-plus
+    - monodraw
+    - obsidian
+    - postman
+    - sabaki
+    - slack
+    - steam
+    - sublime-text
+    - transmission
+    - visual-studio-code
+    - whatsapp
+
+    # Extensions
+    - karabiner-elements
+    - keepingyouawake
+    - linearmouse
+    - rectangle
+    - switchresx
+    - hiddenbar
+    # For dual GPU Macs (pre-M1)
+    # - gfxcardstatus
+
+    # Fonts
+    - font-iosevka-ss10
+
+    manual:
+    - https://filezilla-project.org/download.php?platform=macos-arm64
+    - https://www.image-line.com/fl-studio-download/
+    - https://apps.apple.com/us/app/otp-manager/id928941247
+    - https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984
+
+    dock:
+    # Development
+    - iTerm
+    - Sublime Text
+    - IntelliJ IDEA CE
+    - Visual Studio Code
+    - Monodraw
+    - Hex Fiend
+    - Postman
+    - spacer
+
+    # Browsers
+    - Google Chrome
+    - Firefox
+    - FileZilla
+    - Transmission
+    - spacer
+
+    # Communication
+    - Discord
+    - Slack
+    - WhatsApp
+    - Microsoft Teams
+    - spacer
+
+    # Productivity
+    - Affinity Photo 2
+    - Affinity Designer 2
+    - Obsidian
+    - IINA
+    - Blender
+    - FL Studio 2024
+    - Audacity
+    - Inkscape
+    - spacer
+
+    # Hobby
+    - Music
+    - Sabaki
+    - KaTrain
+    - Majsoul Plus
+    - Steam
+    - spacer
+
+    # System
+    - Bitwarden
+    - OTP Manager
+    - System Settings
+    - Activity Monitor
+
+    setup:
+    - /Applications/Rectangle.app
+    - /Applications/Hidden Bar.app
+    - /Applications/KeepingYouAwake.app
+    - /Applications/LinearMouse.app
+    - ~/Library/PreferencePanes/SwitchResX.prefPaneSwitchResX

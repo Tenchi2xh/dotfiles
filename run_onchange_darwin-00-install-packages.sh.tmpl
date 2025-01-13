@@ -1,0 +1,62 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -e
+
+function confirm() {
+    read -p "$1 [y/N]: "
+    case $(echo $REPLY | tr '[A-Z]' '[a-z]') in
+        y|yes) echo "yes" ;;
+        *)     echo "no" ;;
+    esac
+}
+
+# Brew package managment
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range .packages.darwin.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.darwin.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+EOF
+
+# Manual installs
+
+echo "Some packages need to manually be installed:"
+{{ range .packages.darwin.manual -}}
+echo "- "{{ . | quote }}
+{{ end -}}
+read -p "When everything is installed, press enter to continue."
+
+# Set up dock
+
+if [[ "yes" == $(confirm "Do you want to reset the Dock?") ]]; then
+    source ${CHEZMOI_WORKING_TREE}/scripts/add_to_dock/add_to_dock.sh
+    clear_dock
+    {{ range .packages.darwin.dock -}}
+    dock_item={{ . | quote }}
+    if [ "$dock_item" = "spacer" ]; then
+        add_spacer_to_dock
+    else
+        add_app_to_dock "$dock_item"
+    fi
+    {{ end -}}
+    killall Dock
+fi
+
+# {{ end -}}
+
+# Manual configurations
+
+if [[ "yes" == $(confirm "Do you want to configure extensions?") ]]; then
+    echo "Extensions need to be opened and configured manually to open on login."
+    echo "Press enter after each application to continue on to the next one."
+    echo "Note: For SwitchResX, click the icon, make sure the helper is installed and launch the daemon."
+    {{ range .packages.darwin.setup -}}
+    open {{ . | quote }}
+    read -p "- Press enter when {{ . | quote }} has been configured..."
+    {{ end -}}
+    echo "Manual configurations done."
+fi

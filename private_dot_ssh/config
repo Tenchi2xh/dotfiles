@@ -1,0 +1,8 @@
+Host mister
+  Hostname 192.168.68.113
+  user root
+
+Host eggplant
+  Hostname 192.168.2.128
+  IdentityFile ~/.ssh/id_rsa
+  user pi
