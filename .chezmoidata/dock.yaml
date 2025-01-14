@@ -1,0 +1,49 @@
+dock:
+  # Development
+  - iTerm
+  - Sublime Text
+  - IntelliJ IDEA CE
+  - Visual Studio Code
+  - Monodraw
+  - Hex Fiend
+  - Postman
+  - spacer
+
+  # Browsers
+  - Google Chrome
+  - Firefox
+  - FileZilla
+  - spacer
+
+  # Communication
+  - Discord
+  - Slack
+  - WhatsApp
+  - Microsoft Teams
+  - Microsoft Outlook
+  - spacer
+
+  # Productivity
+  - Affinity Photo 2
+  - Affinity Designer 2
+  - Obsidian
+  - IINA
+  - Blender
+  - FL Studio 2024
+  - Audacity
+  - Inkscape
+  - spacer
+
+  # Hobby
+  - Music
+  - Sabaki
+  - KaTrain
+  - Majsoul Plus
+  - Steam
+  - spacer
+
+  # System
+  - Bitwarden
+  - OTP Manager
+  - System Settings
+  - Activity Monitor

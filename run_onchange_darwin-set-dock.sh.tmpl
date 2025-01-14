@@ -1,0 +1,26 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -e
+source ${CHEZMOI_WORKING_TREE}/scripts/confirm.sh 
+
+# Set up dock
+
+if [[ "yes" == $(confirm "Do you want to reset the Dock?") ]]; then
+    source ${CHEZMOI_WORKING_TREE}/scripts/add_to_dock/add_to_dock.sh
+
+    clear_dock
+
+    {{ range .dock -}}
+        dock_item={{ . | quote }}
+        if [ "$dock_item" = "spacer" ]; then
+            add_spacer_to_dock
+        else
+            add_app_to_dock "$dock_item"
+        fi
+    {{ end -}}
+
+    killall Dock
+fi
+
+{{ end -}}

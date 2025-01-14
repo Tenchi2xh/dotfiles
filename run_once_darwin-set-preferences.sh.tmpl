@@ -15,7 +15,7 @@ mkdir -p ~/Pictures/Screenshots
 defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots"
 defaults write com.apple.screencapture "show-thumbnail" -bool false
 # Show seconds in status bar
-defaults delete -g AppleICUForce12HourTime > /dev/null 2>&1
+defaults delete -g AppleICUForce12HourTime > /dev/null 2>&1 || true
 defaults write com.apple.menuextra.clock "Show24Hour" -bool true
 defaults write com.apple.menuextra.clock "IsAnalog" -bool false
 defaults write com.apple.menuextra.clock "ShowDayOfWeek" -bool false
