@@ -5,7 +5,7 @@
 	"caret_extra_top": 4,
 	"caret_extra_width": 0,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"drag_text": false,
 	"enable_hexadecimal_encoding": false,
 	"fade_fold_buttons": false,
@@ -32,12 +32,13 @@
 	"show_encoding": true,
 	"show_full_path": true,
 	"show_line_endings": true,
-	"theme": "Material-Theme-Palenight.sublime-theme",
+	"theme": "ayu-mirage.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
 	"use_tab_stops": false,
 	"mde.auto_fold_link.enabled": false,
-	"material_theme_accent_cyan": true,
-	"material_theme_arrow_folders": true,
-	"material_theme_compact_sidebar": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
 }

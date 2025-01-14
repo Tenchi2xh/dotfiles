@@ -1,0 +1,32 @@
+[
+    {
+        "class": "sidebar_label",
+        "font.face": "Iosevka Fixed SS10",
+        "font.size": 14
+    },
+    {
+        "class": "sidebar_heading",
+        "font.face": "Iosevka Fixed SS10",
+        "font.size": 16
+    },
+    {
+        "class": "tab_label",
+        "font.face": "Iosevka Fixed SS10",
+        "font.size": 14
+    },
+    {
+        "class": "label_control",
+        "font.face": "Iosevka Fixed SS10",
+        "font.size": 14
+    },
+    {
+        "class": "quick_panel_label",
+        "font.face": "Iosevka Fixed SS10",
+        "font.size": 14
+    },
+    {
+        "class": "quick_panel_path_label",
+        "font.face": "Iosevka Fixed SS10",
+        "font.size": 14
+    }
+]
