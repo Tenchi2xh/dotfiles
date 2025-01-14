@@ -66,6 +66,7 @@ packages:
     - https://www.image-line.com/fl-studio-download/
     - https://apps.apple.com/us/app/otp-manager/id928941247
     - https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984
+    - https://apps.apple.com/us/app/microsoft-outlook/id985367838
 
     dock:
     # Development
@@ -90,6 +91,7 @@ packages:
     - Slack
     - WhatsApp
     - Microsoft Teams
+    - Microsoft Outlook
     - spacer
 
     # Productivity
