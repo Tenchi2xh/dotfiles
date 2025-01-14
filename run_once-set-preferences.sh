@@ -1,8 +1,9 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 set -e
 
+echo
+echo "---"
 echo "Applying system preferences..."
 # For more settings see https://macos-defaults.com/ and https://github.com/chimurai/dotfiles/blob/master/run_once_90_macos_configuration.sh.tmpl
 
@@ -49,5 +50,3 @@ echo "Restarting system processes..."
 killall Dock
 killall SystemUIServer
 killall Finder
-
-{{ end -}}

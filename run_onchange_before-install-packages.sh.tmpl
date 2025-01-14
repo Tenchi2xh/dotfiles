@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 set -e
@@ -6,19 +5,24 @@ source ${CHEZMOI_WORKING_TREE}/scripts/confirm.sh
 
 # Brew package managment
 
+echo
+echo "---"
+echo "Installing brew packages..."
 brew bundle --no-lock --file=/dev/stdin <<EOF
-{{ range .packages.darwin.brews -}}
+{{ range .packages.brews -}}
 brew {{ . | quote }}
 {{ end -}}
-{{ range .packages.darwin.casks -}}
+{{ range .packages.casks -}}
 cask {{ . | quote }}
 {{ end -}}
 EOF
 
 # Manual installs
 
+echo
+echo "---"
 echo "Some packages need to manually be installed:"
-{{ range .packages.darwin.manual -}}
+{{ range .packages.manual -}}
 echo "- "{{ . | quote }}
 {{ end -}}
 read -p "When everything is installed, press enter to continue."
@@ -26,15 +30,15 @@ read -p "When everything is installed, press enter to continue."
 
 # Manual configurations
 
+echo
+echo "---"
 if [[ "yes" == $(confirm "Do you want to configure extensions?") ]]; then
     echo "Extensions need to be opened and configured manually to open on login."
     echo "Press enter after each application to continue on to the next one."
     echo "Note: For SwitchResX, click the icon, make sure the helper is installed and launch the daemon."
-    {{ range .packages.darwin.setup -}}
+    {{ range .packages.setup -}}
     open {{ . | quote }}
     read -p "- Press enter when {{ . | quote }} has been configured..."
     {{ end -}}
     echo "Manual configurations done."
 fi
-
-{{ end -}}

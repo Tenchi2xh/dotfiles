@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 set -e
@@ -6,6 +5,8 @@ source ${CHEZMOI_WORKING_TREE}/scripts/confirm.sh
 
 # Set up dock
 
+echo
+echo "---"
 if [[ "yes" == $(confirm "Do you want to reset the Dock?") ]]; then
     source ${CHEZMOI_WORKING_TREE}/scripts/add_to_dock/add_to_dock.sh
 
@@ -22,5 +23,3 @@ if [[ "yes" == $(confirm "Do you want to reset the Dock?") ]]; then
 
     killall Dock
 fi
-
-{{ end -}}
