@@ -41,6 +41,7 @@ packages:
     - rectangle
     - switchresx
     - hiddenbar
+    - topnotch
     # For dual GPU Macs (pre-M1)
     # - gfxcardstatus
 
@@ -108,4 +109,5 @@ packages:
     - /Applications/Hidden Bar.app
     - /Applications/KeepingYouAwake.app
     - /Applications/LinearMouse.app
+    - /Applications/TopNotch.app
     - ~/Library/PreferencePanes/SwitchResX.prefPaneSwitchResX
