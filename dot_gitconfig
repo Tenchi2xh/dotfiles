@@ -12,12 +12,36 @@
     diffFilter = delta --color-only
 
 [delta]
-  syntax-theme = Monokai Extended Bright
-  line-numbers = true
+    syntax-theme = Monokai Extended Bright
+    dark = true
+    # side-by-side = true
+    commit-decoration-style ="#ffd866" box
+    commit-style = "#ffd866"
+    file-style = omit
+    hunk-header-decoration-style = "#888888" ol ul
+    hunk-header-file-style = "#ff6188"
+    hunk-header-line-number-style = "#78dce8" bold
+    hunk-header-style = file line-number syntax italic
+    line-numbers = true
+    line-numbers-left-format = "  {nm:>1} │  "
+    line-numbers-left-style = "#888888"
+    line-numbers-right-format = "  {np:>1} │  "
+    line-numbers-right-style = "#888888"
 
 [push]
     default = simple
 
 [alias]
-    lg = log --color --graph --pretty=format:'%Cgreen%h%Creset -%C(cyan)%d%Creset %s %C(bold blue)(%cr)%Creset %C(magenta)<%an>%Creset' --abbrev-commit
+    lg = "log --color --graph --pretty=format:'%C(#ffd866)%h%Creset - %C(#ab9df2)<%an>%Creset %s %C(#a9dc76)(%cr)%Creset%C(#78dce8)%d%Creset' --abbrev-commit"
     sdiff = diff --staged
+
+[color.status]
+    changed = "#ffd866"
+    added = "#a9dc76"
+    untracked = "#ff6188"
+
+[color.branch]
+    local = "#ffd866"
+    current = "brightwhite"
+    remote = "#78dce8"
+    upstream = "#ab9df2"

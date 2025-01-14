@@ -1,0 +1,21 @@
+export EDITOR="subl -w -n"
+
+# Paths for tools
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Replace BSD commands with GNU ones
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+
+# Auth tokens
+export HOMEBREW_GITHUB_API_TOKEN={{ (bitwardenFields "item" "Auth tokens").HOMEBREW_GITHUB_API_TOKEN.value }}
+
+# Run animation and archey
+if [ -n "$PS1" ]; then
+    python3 ~/.local/customizations/animate-logo.py
+fi

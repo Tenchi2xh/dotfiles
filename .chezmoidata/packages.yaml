@@ -1,11 +1,24 @@
 packages:
   darwin:
     brews:
+    - ansifilter
+    - bitwarden-cli
+    - cmatrix
+    - coreutils
     - git
     - git-delta
-    - bitwarden-cli
+    - grep
+    - jenv
+    - nano
+    - poetry
+    - ptpython
+    - pygments
     - python
+    - tldr
+    - tree
     - wget
+    - yt-dlp
+    - zsh-syntax-highlighting
 
     casks:
     # Apps
