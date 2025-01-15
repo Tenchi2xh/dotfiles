@@ -4,8 +4,8 @@ Very customized macOS setup for Macbooks.
 
 ## Features:
 
-- A host of applications and tools
-- Suite of macOS settings
+- Automatic installation of a host of applications and tools
+- Pre-configure most macOS settings with more sensible defaults
 - Managed Dock and icons:
 
     ![](resources/dock.png)
@@ -16,14 +16,22 @@ Very customized macOS setup for Macbooks.
 
     <img src="resources/prompt.png" width=556 />
 
-    - Animated `archey`
+    - Animated intro
     - Custom syntax highlighting
     - Custom colors for `ls`, `tree`, `grep`, `man`, `git`, `tldr`
 
 - Pre-configured tools:
-    - iTerm2: global shortcut: <kbd>⌘ + `</kbd>, custom font and theme
+    - iTerm2: quake console style global shortcut: <kbd>⌘ + `</kbd>, custom font and theme
     - Sublime Text: theme, settings, packages
     - SSH private key and other environment variables using password manager
+
+- Fixes missing macOS features:
+    - Hide menu bar icons ([Hidden Bar](https://github.com/dwarvesf/hidden))
+    - Window tiling manager ([Rectangle](https://rectangleapp.com/))
+    - Resolution switcher ([SwitchResX](https://www.madrau.com/), paid)
+    - Prevent sleep ([KeepingYouAwake](https://keepingyouawake.app/))
+    - Hide notch ([TopNotch](https://topnotch.app/))
+    - Mouse acceleration fix ([Linear Mouse](https://linearmouse.app/))
 
 ## Install
 
