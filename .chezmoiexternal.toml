@@ -7,3 +7,8 @@
     type = "file"
     url = "https://github.com/tale/iconset/releases/download/v1.0.0/iconset"
     executable = true
+
+[".local/scripts/add_to_dock"]
+    type = "archive"
+    url = "https://github.com/ryanpavlick/add_to_dock/archive/refs/heads/master.zip"
+    stripComponents = 1

@@ -8,7 +8,7 @@ source ${CHEZMOI_WORKING_TREE}/scripts/confirm.sh
 echo
 echo "---"
 if [[ "yes" == $(confirm "Do you want to reset the Dock?") ]]; then
-    source ${CHEZMOI_WORKING_TREE}/scripts/add_to_dock/add_to_dock.sh
+    source ~/.local/scripts/add_to_dock/add_to_dock.sh
 
     clear_dock
 
