@@ -14,7 +14,7 @@ packages:
     - ptpython
     - pygments
     - python
-    - tldr
+    - tlrc
     - tree
     - wget
     - yt-dlp

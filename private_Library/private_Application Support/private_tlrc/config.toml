@@ -1,0 +1,37 @@
+[output]
+show_title = true
+platform_title = true
+show_hyphens = false
+compact = false
+raw_markdown = false
+
+[indent]
+title = 2
+description = 2
+bullet = 2
+example = 4
+
+[style.title]
+color = { rgb = [252, 152, 103] }
+bold = true
+
+[style.description]
+color = { rgb = [255, 255, 255] }
+
+[style.bullet]
+color = { rgb = [169, 220, 118] }
+italic = true
+
+[style.example]
+color = { rgb = [120, 220, 232] }
+
+[style.url]
+color = { rgb = [255, 97, 136] }
+
+[style.inline_code]
+color = { rgb = [171, 157, 242] }
+italic = true
+
+[style.placeholder]
+color = { rgb = [255, 216, 102] }
+italic = true
