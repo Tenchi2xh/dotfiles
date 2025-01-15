@@ -9,6 +9,7 @@ packages:
     - grep
     - jenv
     - nano
+    - ncdu
     - poetry
     - ptpython
     - pygments

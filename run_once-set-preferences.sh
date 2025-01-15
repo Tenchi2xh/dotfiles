@@ -22,7 +22,7 @@ defaults write com.apple.menuextra.clock "IsAnalog" -bool false
 defaults write com.apple.menuextra.clock "ShowDayOfWeek" -bool false
 defaults write com.apple.menuextra.clock "ShowSeconds" -bool true
 defaults write com.apple.menuextra.clock "DateFormat" -string "d MMM HH:mm:ss"
-defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool true
+# defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool true
 # Show extensions in Finder
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool true
 # Show path bar at the bottom of Finder
