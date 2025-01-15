@@ -5,7 +5,9 @@ set -e
 echo
 echo "---"
 echo "Applying system preferences..."
-# For more settings see https://macos-defaults.com/ and https://github.com/chimurai/dotfiles/blob/master/run_once_90_macos_configuration.sh.tmpl
+# For more settings, see:
+# - https://macos-defaults.com/
+# - https://github.com/chimurai/dotfiles/blob/master/run_once_90_macos_configuration.sh.tmpl
 
 # Font antialiasing on retina screen makes text appear bold
 defaults write -g AppleFontSmoothing -int 0
