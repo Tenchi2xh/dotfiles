@@ -34,3 +34,6 @@ icons:
 
   - url: https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/6a90c613f62049918cb040d7df9854b4_blender.icns
     app: Blender
+
+  - url: resources/katrain.icns
+    app: KaTrain

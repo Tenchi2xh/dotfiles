@@ -10,7 +10,12 @@ echo "---"
 if [[ "yes" == $(confirm "Do you want to override app icons?") ]]; then
     mkdir -p /tmp/icons
     {{ range .icons -}}
-        wget -nv {{ .url | quote }} -O "/tmp/icons/{{ .app }}.icns"
+        url={{ .url | quote }}
+        if [[ "$url" == http* ]]; then
+            wget -nv "$url" -O "/tmp/icons/{{ .app }}.icns"
+        else
+            cp "${CHEZMOI_WORKING_TREE}/$url" "/tmp/icons/{{ .app }}.icns"
+        fi
     {{ end -}}
     sudo ~/.local/bin/iconset folder /tmp/icons
 fi
