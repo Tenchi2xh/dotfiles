@@ -15,7 +15,7 @@ Very customized macOS setup for Macbooks.
 
 - Configures most macOS settings with more [sensible defaults](.chezmoiscripts/run_once_set-preferences.sh)
 
-- Sets up a [custom prompt](./dot_local/customizations/prompt.zsh) and [CLI themes](./dot_local/customizations/colors.zsh):
+- Sets up a [custom prompt](./dotfiles/dot_local/customizations/prompt.zsh) and [CLI themes](./dotfiles/dot_local/customizations/colors.zsh):
 
     <img src="resources/prompt.png" width=556 />
 
