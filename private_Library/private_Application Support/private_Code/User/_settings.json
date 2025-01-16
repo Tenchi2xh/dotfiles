@@ -1,0 +1,24 @@
+{
+    "editor.fontFamily": "Iosevka Fixed SS10",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.renderWhitespace": "trailing",
+    "editor.rulers": [
+        100
+    ],
+    "explorer.excludeGitIgnore": true,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "typescript.preferences.quoteStyle": "double",
+    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.editor.customLabels.patterns": {
+        "**/+*": "${dirname}/${filename}.${extname}"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always"
+}

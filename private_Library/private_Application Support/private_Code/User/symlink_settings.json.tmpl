@@ -1,0 +1,7 @@
+{{/*
+Same trick as the iTerm config:
+We put a symlink in the VS Code directory that links to this repo's _settings.json file
+so that when we save new settings in VSCode it synchronizes them to our dotfiles.
+*/ -}}
+
+{{ .chezmoi.sourceDir }}/private_Library/private_Application Support/private_Code/User/_settings.json

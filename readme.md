@@ -5,17 +5,17 @@ Very customized macOS setup for Macbooks.
 ## Features:
 
 - Use easily editable config files to automatically:
-    - Install of a host of applications and tools
-    - Manage the Dock and and set custom icons:
+    - Install of a host of [applications and tools](.chezmoidata/packages.yaml)
+    - Manage the [Dock](.chezmoidata/dock.yaml) and and set [custom icons](.chezmoidata/icons.yaml):
 
         ![](resources/dock.png)
         - Apps are automatically added to the dock and separated into categories
         - Custom icons are patched into apps that ship with ugly default icons
-    - Set custom file associations
+    - Set [custom file associations](.chezmoidata/associations.yaml)
 
-- Configures most macOS settings with more sensible defaults
+- Configures most macOS settings with more [sensible defaults](./run_once_set-preferences.sh)
 
-- Sets up a custom prompt and CLI themes:
+- Sets up a [custom prompt](./dot_local/customizations/prompt.zsh) and [CLI themes](./dot_local/customizations/colors.zsh):
 
     <img src="resources/prompt.png" width=556 />
 
@@ -26,6 +26,7 @@ Very customized macOS setup for Macbooks.
 - Configures some tools:
     - iTerm2: quake console style global shortcut: <kbd>⌘ + `</kbd>, custom font and theme
     - Sublime Text: theme, settings, packages
+    - Visual Studio Code: theme, settings, extensions
     - SSH private key and other environment variables using password manager
 
 - Fixes missing macOS features:
@@ -59,7 +60,3 @@ On a new computer:
     ```bash
     chezmoi init --apply Tenchi2xh
     ```
-
-## TODO
-
-- Visual Studio Code pre-configuration for theme, settings, extensions

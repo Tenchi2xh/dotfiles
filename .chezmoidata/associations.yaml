@@ -1,3 +1,6 @@
+# To find the bundle name of an app:
+#   osascript -e 'id of app "Sublime Text"'
+
 associations:
 - bundle: com.sublimetext.4
   extensions:
