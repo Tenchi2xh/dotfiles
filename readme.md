@@ -13,7 +13,7 @@ Very customized macOS setup for Macbooks.
         - Custom icons are patched into apps that ship with ugly default icons
     - Set [custom file associations](.chezmoidata/associations.yaml)
 
-- Configures most macOS settings with more [sensible defaults](./run_once_set-preferences.sh)
+- Configures most macOS settings with more [sensible defaults](.chezmoiscripts/run_once_set-preferences.sh)
 
 - Sets up a [custom prompt](./dot_local/customizations/prompt.zsh) and [CLI themes](./dot_local/customizations/colors.zsh):
 
