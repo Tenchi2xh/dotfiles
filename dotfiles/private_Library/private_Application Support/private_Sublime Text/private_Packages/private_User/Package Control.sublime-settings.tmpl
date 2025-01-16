@@ -1,3 +1,10 @@
 {
-	"installed_packages": {{ .sublime.packages | toJson }}
+	"installed_packages":
+	[
+		{{- $packages := .sublime.packages -}}
+		{{- range $index, $package := $packages -}}
+		{{- if $index }},{{ end }}
+		{{ . | quote }}
+		{{- end }}
+	]
 }
