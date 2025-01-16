@@ -12,3 +12,7 @@
     type = "archive"
     url = "https://github.com/ryanpavlick/add_to_dock/archive/refs/heads/master.zip"
     stripComponents = 1
+
+["Library/Application Support/Sublime Text/Installed Packages/Package Control.sublime-package"]
+    type = "file"
+    url = "https://packagecontrol.io/Package%20Control.sublime-package"

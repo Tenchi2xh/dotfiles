@@ -1,0 +1,14 @@
+# To see the full name of your currently installed extensions:
+#   code --list-extensions
+
+vscode:
+  extensions:
+    - bierner.markdown-preview-github-styles
+    - marp-team.marp-vscode
+    - ms-python.debugpy
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - pkief.material-icon-theme
+    - svelte.svelte-vscode
+    - teabyii.ayu
+    - viktorzetterstrom.non-breaking-space-highlighter

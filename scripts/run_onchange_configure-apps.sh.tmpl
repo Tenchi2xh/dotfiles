@@ -6,10 +6,6 @@ echo
 echo "---"
 echo "Configuring apps..."
 
-# Sublime Text
-
-wget -nv "https://packagecontrol.io/Package%20Control.sublime-package" -O ~/Library/"Application Support"/"Sublime Text"/"Installed Packages"/"Package Control.sublime-package"
-
 # iTerm2
 
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.config/iterm"
@@ -18,15 +14,9 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 # Visual Studio Code
 
 vscode_extensions=(
-    "bierner.markdown-preview-github-styles"
-    "marp-team.marp-vscode"
-    "ms-python.debugpy"
-    "ms-python.python"
-    "ms-python.vscode-pylance"
-    "pkief.material-icon-theme"
-    "svelte.svelte-vscode"
-    "teabyii.ayu"
-    "viktorzetterstrom.non-breaking-space-highlighter"
+    {{ range .vscode.extensions -}}
+    {{ . | quote }}
+    {{ end -}}
 )
 
 vscode_installed_extensions=$(code --list-extensions)
