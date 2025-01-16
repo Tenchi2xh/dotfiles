@@ -1,11 +1,11 @@
 # Monokai colors
 
-M_RED=204    #ff6188 [255, 97, 136]
-M_ORANGE=209 #fc9867 [252, 152, 103]
-M_YELLOW=221 #ffd866 [255, 216, 102]
-M_GREEN=150  #a9dc76 [169, 220, 118]
-M_BLUE=116   #78dce8 [120, 220, 232]
-M_PURPLE=147 #ab9df2 [171, 157, 242]
+export MONOKAI_RED=204    #ff6188 [255, 97, 136]
+export MONOKAI_ORANGE=209 #fc9867 [252, 152, 103]
+export MONOKAI_YELLOW=221 #ffd866 [255, 216, 102]
+export MONOKAI_GREEN=150  #a9dc76 [169, 220, 118]
+export MONOKAI_BLUE=116   #78dce8 [120, 220, 232]
+export MONOKAI_PURPLE=147 #ab9df2 [171, 157, 242]
 
 fg() { echo -e "\e[38;5;$1m" }
 bg() { echo -e "\e[48;5;$1m" }
@@ -17,44 +17,44 @@ export LS_COLORS="*~=0;38;2;122;112;112:bd=0;38;2;102;217;239;48;2;51;51;51:ca=0
 export GREP_COLORS="ms=38;2;249;38;114:mc=38;2;249;38;114:sl=:cx=:fn=0;38;2;102;217;239:ln=0;38;2;0;255;135:bn=0;38;2;0;255;135:se=0;38;2;253;151;31"
 
 # man colors
-export LESS_TERMCAP_mb=$(fg $M_PURPLE)
-export LESS_TERMCAP_md=$(fg $M_RED)
+export LESS_TERMCAP_mb=$(fg $MONOKAI_PURPLE)
+export LESS_TERMCAP_md=$(fg $MONOKAI_RED)
 export LESS_TERMCAP_me=$'\e[0m'
 export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$(fg $M_BLUE)
+export LESS_TERMCAP_so=$(fg $MONOKAI_BLUE)
 export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$(fg $M_YELLOW)
+export LESS_TERMCAP_us=$(fg $MONOKAI_YELLOW)
 
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 typeset -gA ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[bracket-error]="fg=$M_RED"
+ZSH_HIGHLIGHT_STYLES[bracket-error]="fg=$MONOKAI_RED"
 ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]="underline"
 ZSH_HIGHLIGHT_STYLES[bracket-level-1]="none"
 ZSH_HIGHLIGHT_STYLES[bracket-level-2]="none"
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]="none"
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]="none"
 ZSH_HIGHLIGHT_STYLES[default]="none"
-ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=$M_RED"
-ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=$M_RED"
-ZSH_HIGHLIGHT_STYLES[alias]="fg=$M_BLUE"
-ZSH_HIGHLIGHT_STYLES[builtin]="fg=$M_BLUE"
-ZSH_HIGHLIGHT_STYLES[function]="fg=$M_BLUE"
-ZSH_HIGHLIGHT_STYLES[command]="fg=$M_BLUE"
-ZSH_HIGHLIGHT_STYLES[precommand]="fg=$M_YELLOW"
-ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=$M_PURPLE"
-ZSH_HIGHLIGHT_STYLES[redirection]="fg=$M_PURPLE"
-ZSH_HIGHLIGHT_STYLES[named-fd]="fg=$M_PURPLE"
-ZSH_HIGHLIGHT_STYLES[numeric-fd]="fg=$M_PURPLE"
-ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=$M_BLUE"
-ZSH_HIGHLIGHT_STYLES[path]="fg=$M_ORANGE"
-ZSH_HIGHLIGHT_STYLES[globbing]="fg=$M_ORANGE"
-ZSH_HIGHLIGHT_STYLES[history-expansion]="fg=$M_PURPLE"
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$M_GREEN"
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$M_GREEN"
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]="fg=$M_YELLOW"
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=$M_YELLOW"
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=$M_YELLOW"
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="fg=$M_YELLOW"
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]="fg=$M_YELLOW"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=$MONOKAI_RED"
+ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=$MONOKAI_RED"
+ZSH_HIGHLIGHT_STYLES[alias]="fg=$MONOKAI_BLUE"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=$MONOKAI_BLUE"
+ZSH_HIGHLIGHT_STYLES[function]="fg=$MONOKAI_BLUE"
+ZSH_HIGHLIGHT_STYLES[command]="fg=$MONOKAI_BLUE"
+ZSH_HIGHLIGHT_STYLES[precommand]="fg=$MONOKAI_YELLOW"
+ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=$MONOKAI_PURPLE"
+ZSH_HIGHLIGHT_STYLES[redirection]="fg=$MONOKAI_PURPLE"
+ZSH_HIGHLIGHT_STYLES[named-fd]="fg=$MONOKAI_PURPLE"
+ZSH_HIGHLIGHT_STYLES[numeric-fd]="fg=$MONOKAI_PURPLE"
+ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=$MONOKAI_BLUE"
+ZSH_HIGHLIGHT_STYLES[path]="fg=$MONOKAI_ORANGE"
+ZSH_HIGHLIGHT_STYLES[globbing]="fg=$MONOKAI_ORANGE"
+ZSH_HIGHLIGHT_STYLES[history-expansion]="fg=$MONOKAI_PURPLE"
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$MONOKAI_GREEN"
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$MONOKAI_GREEN"
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]="fg=$MONOKAI_YELLOW"
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=$MONOKAI_YELLOW"
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=$MONOKAI_YELLOW"
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="fg=$MONOKAI_YELLOW"
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]="fg=$MONOKAI_YELLOW"
 ZSH_HIGHLIGHT_STYLES[assign]="none"

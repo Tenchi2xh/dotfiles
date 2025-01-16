@@ -70,4 +70,9 @@ function tenchi_prompt() {
   PROMPT="${prompt}${RESET}"
 }
 
+function blank() {
+  echo
+}
+
 precmd_functions+=(tenchi_prompt)
+preexec_functions+=(blank)

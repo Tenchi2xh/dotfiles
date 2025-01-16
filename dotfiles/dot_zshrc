@@ -8,5 +8,6 @@ SAVEHIST=10000
 source ~/.local/customizations/colors.zsh
 source ~/.local/customizations/shortcuts.zsh
 source ~/.local/customizations/prompt.zsh
+source ~/.local/customizations/completion.zsh
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

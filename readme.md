@@ -20,7 +20,7 @@ Very customized macOS setup for Macbooks.
     <img src="resources/prompt.png" width=556 />
 
     - Animated intro
-    - Custom syntax highlighting
+    - Custom syntax highlighting and tab completions
     - Custom colors for `ls`, `tree`, `grep`, `man`, `git`, `tldr`
 
 - Configures some tools:

@@ -16,3 +16,13 @@
 ["Library/Application Support/Sublime Text/Installed Packages/Package Control.sublime-package"]
     type = "file"
     url = "https://packagecontrol.io/Package%20Control.sublime-package"
+
+[".local/customizations/zsh-completions"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-completions/archive/refs/heads/master.zip"
+    path = "master/src"
+    stripComponents = 2
+
+[".local/customizations/zsh-completions/_kubectl"]
+    type = "file"
+    url = "https://github.com/Phantas0s/.dotfiles/raw/refs/heads/master/zsh/plugins/kubectl-completion/_kubectl"
