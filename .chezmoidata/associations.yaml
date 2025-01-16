@@ -1,0 +1,71 @@
+associations:
+- bundle: com.sublimetext.4
+  extensions:
+  # Plain text
+  - ["public.plain-text", "public.content", ".txt"]
+  # Config files
+  - [".ini", ".conf", ".env"]
+  # Build and project files
+  - [".iml", ".spec", ".gradle", ".make", ".cmake"]
+  # Logs
+  - [".log"]
+  # Git files
+  - [".gitignore", ".gitattributes", ".gitmodules"]
+  # XML
+  - [".xml"]
+  # CSS and preprocessors
+  - [".css", ".scss", ".sass", ".less"]
+  # JavaScript and TypeScript
+  - [".js", ".jsx", ".ts", ".tsx"]
+  # Web template files
+  - [".pug"]
+  # Python
+  - [".py", ".pyw", ".pyx"]
+  # Java
+  - [".java"]
+  # Kotlin
+  - [".kt", ".kts"]
+  # C and C++
+  - [".c", ".h", ".cpp", ".hpp", ".cc", ".hh", ".cxx", ".hxx"]
+  # C#
+  - [".cs"]
+  # Go
+  - [".go"]
+  # Rust
+  - [".rs"]
+  # Ruby
+  - [".rb", ".rake", ".gemspec"]
+  # PHP
+  - [".php"]
+  # Perl
+  - [".pl", ".pm"]
+  # Lua
+  - [".lua"]
+  # Swift
+  - [".swift"]
+  # Objective-C
+  - [".m", ".mm"]
+  # Shell and batch scripts
+  - [".sh", ".zsh", ".bash", ".ksh", ".bat", ".cmd"]
+  # SQL
+  - [".sql"]
+  # YAML and JSON (already included but listed for clarity)
+  - [".yml", ".yaml", ".json"]
+  # TOML
+  - [".toml"]
+  # CSV and TSV
+  - [".csv", ".tsv"]
+  # Markdown
+  - [".md", ".markdown"]
+  # ReStructuredText
+  - [".rst"]
+  # Docker
+  - ["Dockerfile", ".dockerignore"]
+  # Makefiles
+  - ["Makefile"]
+  # Package managers
+  - ["Pipfile", ".lock"]
+  # LaTeX
+  - [".tex", ".cls"]
+  # Others
+  - [".asm", ".s", ".d", ".r"]

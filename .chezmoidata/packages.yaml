@@ -4,6 +4,7 @@ packages:
     - bitwarden-cli
     - cmatrix
     - coreutils
+    - duti
     - git
     - git-delta
     - grep

@@ -5,6 +5,7 @@ set -e
 echo
 echo "---"
 echo "Applying system preferences..."
+
 # For more settings, see:
 # - https://macos-defaults.com/
 # - https://github.com/chimurai/dotfiles/blob/master/run_once_90_macos_configuration.sh.tmpl
@@ -117,6 +118,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom-right corner: lock screen
 defaults write com.apple.dock wvous-bl-corner -int 13
 defaults write com.apple.dock wvous-bl-modifier -int 0
+
 
 
 # Apply changes by killing all affected processes

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+echo
+echo "---"
+echo "Setting up custom file associations..."
+
+{{ range .associations -}}
+    bundle={{ .bundle | quote }}
+    {{ range .extensions -}}{{ range . -}}
+        duti -s "$bundle" {{ . | quote }} all
+    {{ end -}}{{ end -}}
+{{ end -}}

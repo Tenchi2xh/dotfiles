@@ -1,11 +1,11 @@
 # Monokai colors
 
-M_RED=204    #ff6188
-M_ORANGE=209 #fc9867
-M_YELLOW=221 #ffd866
-M_GREEN=150  #a9dc76
-M_BLUE=116   #78dce8
-M_PURPLE=147 #ab9df2
+M_RED=204    #ff6188 [255, 97, 136]
+M_ORANGE=209 #fc9867 [252, 152, 103]
+M_YELLOW=221 #ffd866 [255, 216, 102]
+M_GREEN=150  #a9dc76 [169, 220, 118]
+M_BLUE=116   #78dce8 [120, 220, 232]
+M_PURPLE=147 #ab9df2 [171, 157, 242]
 
 fg() { echo -e "\e[38;5;$1m" }
 bg() { echo -e "\e[48;5;$1m" }

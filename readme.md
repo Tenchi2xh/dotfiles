@@ -4,15 +4,18 @@ Very customized macOS setup for Macbooks.
 
 ## Features:
 
-- Automatic installation of a host of applications and tools
-- Pre-configure most macOS settings with more sensible defaults
-- Managed Dock and icons:
+- Use easily editable config files to automatically:
+    - Install of a host of applications and tools
+    - Manage the Dock and and set custom icons:
 
-    ![](resources/dock.png)
-    - Apps are automatically added to the dock and grouped by categories
-    - Custom icons are patched into apps that ship with ugly default icons
+        ![](resources/dock.png)
+        - Apps are automatically added to the dock and separated into categories
+        - Custom icons are patched into apps that ship with ugly default icons
+    - Set custom file associations
 
-- Custom prompt and CLI themes:
+- Configures most macOS settings with more sensible defaults
+
+- Sets up a custom prompt and CLI themes:
 
     <img src="resources/prompt.png" width=556 />
 
@@ -20,7 +23,7 @@ Very customized macOS setup for Macbooks.
     - Custom syntax highlighting
     - Custom colors for `ls`, `tree`, `grep`, `man`, `git`, `tldr`
 
-- Pre-configured tools:
+- Configures some tools:
     - iTerm2: quake console style global shortcut: <kbd>⌘ + `</kbd>, custom font and theme
     - Sublime Text: theme, settings, packages
     - SSH private key and other environment variables using password manager
