@@ -67,5 +67,5 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 zstyle ':completion:*' insert-tab false
 
 ## For kubernetes
-source .local/customizations/zsh-completions/_kubectl
+source ~/.local/customizations/zsh-completions/_kubectl
 zstyle ':completion:*:*:kubectl:*' list-grouped false

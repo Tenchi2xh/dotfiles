@@ -17,9 +17,6 @@ with open(Path(customizations / "animation"), "r") as f:
 sys.stdout.write("\033[?25l")
 sys.stdout.flush()
 
-os.system("clear")
-os.system(str(Path(customizations / "archey")))
-
 start = "     \033[38;5;15m\033[48;5;33m   "
 end = "   \033[0m\n"
 spaces = "             "

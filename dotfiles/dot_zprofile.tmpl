@@ -1,9 +1,14 @@
 export EDITOR="subl -w -n"
 
+# Some env inits are slow, this defers their loading asynchronously
+# so that the prompt can appear immediately on new sessions.
+# Also used in .zshrc to load slow plugins
+source ~/.local/customizations/zsh-defer.zsh
+
 # Paths for tools
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+zsh-defer eval "$(jenv init -)"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -17,5 +22,6 @@ export HOMEBREW_GITHUB_API_TOKEN={{ (bitwardenFields "item" "Auth tokens").HOMEB
 
 # Run animation and archey
 if [ -n "$PS1" ]; then
+    ~/.local/customizations/archey
     python3 ~/.local/customizations/animate-logo.py
 fi
