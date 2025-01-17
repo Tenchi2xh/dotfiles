@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+echo
+echo "---"
+echo "Applying system preferences..."
+
+# Close System Settings to avoid it overriding our changes
+osascript -e 'tell application "System Settings" to quit'
+
+# Set screenshots folder and don't show thumbnail
+mkdir -p ~/Pictures/Screenshots
+
+# apply-user-defaults doesn't support -currentHost
+defaults -currentHost write com.apple.controlcenter.plist "BatteryShowPercentage" -bool true
+
+# Hash of config file to trigger on change
+# {{ output "sha256sum" (print .chezmoi.workingTree "/config/macos-preferences.yaml") }}
+apply-user-defaults ${CHEZMOI_WORKING_TREE}/config/macos-preferences.yaml
+
+# Apply changes by killing all affected processes
+echo "Restarting system processes..."
+killall Dock
+killall SystemUIServer
+killall Finder

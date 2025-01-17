@@ -20,6 +20,7 @@ packages:
     - wget
     - yt-dlp
     - zsh-syntax-highlighting
+    - zero-sh/tap/apply-user-defaults
 
   casks:
     # Apps

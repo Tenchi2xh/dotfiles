@@ -5,15 +5,14 @@ Very customized macOS setup for Macbooks.
 ## Features:
 
 - Use easily editable config files to automatically:
-    - Install of a host of [applications and tools](data/packages.yaml)
-    - Manage the [Dock](data/dock.yaml) and and set [custom icons](data/icons.yaml):
+    - Install of a host of [applications and tools](config/packages.yaml)
+    - Manage the [Dock](config/dock.yaml) and and set [custom icons](config/icons.yaml):
 
         ![](resources/dock.png)
         - Apps are automatically added to the dock and separated into categories
         - Custom icons are patched into apps that ship with ugly default icons
-    - Set [custom file associations](data/associations.yaml)
-
-- Configures most macOS settings with more [sensible defaults](scripts/run_once_set-preferences.sh)
+    - Set [custom file associations](config/associations.yaml)
+    - Configures most macOS settings with more [sensible defaults](config/macos-preferences.yaml)
 
 - Sets up a [custom prompt](dotfiles/dot_local/customizations/prompt.zsh) and [CLI themes](dotfiles/dot_local/customizations/colors.zsh):
 
@@ -25,8 +24,8 @@ Very customized macOS setup for Macbooks.
 
 - Configures some tools:
     - iTerm2: quake console style global shortcut: <kbd>⌘ + `</kbd>, custom font and theme
-    - Sublime Text: [packages](data/sublime.yaml), [theme, settings](dotfiles/private_Library/private_Application%20Support/private_Sublime%20Text/private_Packages/private_User/Preferences.sublime-settings)
-    - Visual Studio Code: [extensions](data/vscode.yaml), [theme, settings](dotfiles/private_Library/private_Application%20Support/private_Code/User/_settings.json)
+    - Sublime Text: [packages](config/sublime.yaml), [theme, settings](dotfiles/private_Library/private_Application%20Support/private_Sublime%20Text/private_Packages/private_User/Preferences.sublime-settings)
+    - Visual Studio Code: [extensions](config/vscode.yaml), [theme, settings](dotfiles/private_Library/private_Application%20Support/private_Code/User/_settings.json)
     - SSH private key and other environment variables using password manager
 
 - Fixes missing macOS features:

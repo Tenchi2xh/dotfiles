@@ -1,0 +1,75 @@
+# For more settings, see:
+# - https://macos-defaults.com/
+# - https://github.com/chimurai/dotfiles/blob/master/run_once_90_macos_configuration.sh.tmpl
+# - https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+
+# Commands that use -g or -globalDomain
+NSGlobalDomain:
+  AppleFontSmoothing: 0
+  AppleICUForce12HourTime: false
+  AppleShowAllExtensions: true
+  AppleLocale: en_US@currency=EUR
+  AppleMeasurementUnits: Centimeters
+  AppleMetricUnits: true
+  InitialKeyRepeat: 15
+  KeyRepeat: 2
+  NSDocumentSaveNewDocumentsToCloud: false
+  com.apple.swipescrolldirection: false
+
+  # Allow keyboard navigation in alert dialogs
+  AppleKeyboardUIMode: 3
+
+  # Disable all auto-corrects
+  NSAutomaticCapitalizationEnabled: false
+  NSAutomaticDashSubstitutionEnabled: false
+  NSAutomaticPeriodSubstitutionEnabled: false
+  NSAutomaticQuoteSubstitutionEnabled: false
+  NSAutomaticSpellingCorrectionEnabled: false
+
+  # Expand save panel by default
+  NSNavPanelExpandedStateForSaveMode: true
+  NSNavPanelExpandedStateForSaveMode2: true
+
+com.apple.dock:
+  autohide: true
+  show-recents: false
+  # Setup hot corners, possible values:
+  #  0: no-op                    2: Mission Control          3: Show application windows
+  #  4: Desktop                  5: Start screen saver       6: Disable screen saver
+  #  7: Dashboard               10: Put display to sleep    11: Launchpad
+  # 12: Notification Center     13: Lock Screen
+  # Bottom-left corner: start screen saver
+  wvous-bl-corner: 5
+  wvous-bl-modifier: 0
+  # Bottom-right corner: lock screen
+  wvous-br-corner: 13
+  wvous-br-modifier: 0
+
+com.apple.screencapture:
+  location: ~/Pictures/Screenshots
+  show-thumbnail: false
+
+com.apple.menuextra.clock:
+  Show24Hour: true
+  IsAnalog: false
+  ShowDayOfWeek: false
+  ShowSeconds: true
+  DateFormat: d MMM HH:mm:ss
+
+com.apple.finder:
+  ShowPathbar: true
+  ShowStatusBar: false
+  # Four-letter codes for view modes: Nlsv, icnv, clmv, glyv
+  FXPreferredViewStyle: clmv
+  # Folders at the top in Finder
+  _FXSortFoldersFirst: true
+  # Set home as the default location for new Finder windows
+  NewWindowTarget: PfLo
+  NewWindowTargetPath: file://${HOME}/
+  # When performing a search, search the current folder by default
+  FXDefaultSearchScope: SCcf
+
+com.apple.desktopservices:
+  # Avoid creating .DS_Store files on network or USB volumes
+  DSDontWriteNetworkStores: true
+  DSDontWriteUSBStores: true
