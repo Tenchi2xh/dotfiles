@@ -23,18 +23,16 @@ hostname=$(hostname | sed 's/.local//g')
 #     echo $ip > "$ipfile"
 # fi
 
+reset=$(tput sgr0 2>/dev/null)
+blue="\033[38;5;39m"
+gray="\033[38;5;8m"
+
 ip=$(ipconfig getifaddr en0)
-
 distro="macOS $(sw_vers -productVersion)"
-
 kernel=$(uname)
-
 uptime=$(uptime | sed 's/.*up \([^,]*\), .*/\1/')
-
 shell="$SHELL"
-
 terminal="${TERM_PROGRAM//.app/} ($TERM)"
-
 cpu=$(sysctl -n machdep.cpu.brand_string)
 
 battery=$(ioreg -c AppleSmartBattery -r | awk '
@@ -50,7 +48,8 @@ battery=$(ioreg -c AppleSmartBattery -r | awk '
   }'
 )
 battery_percent=$(echo "$battery" | sed 's/\(.*\)%.*$/\1/')
-battery="$(progress_bar $MONOKAI_YELLOW $battery_percent 100) $battery"
+battery="$(printf "%26s" $battery)"
+battery="$(progress_bar $MONOKAI_YELLOW $battery_percent 100)  $gray$battery"
 
 vmstat=$(vm_stat)
 page_size=$(echo "$vmstat" | grep 'page size' | cut -d ' ' -f 8)
@@ -59,26 +58,23 @@ file_pages=$(echo "$vmstat" | awk '/^File-backed pages/ {print substr($3, 1, len
 mem_total=$(( $(sysctl -n hw.memsize) / 1024.0 ** 3 ))
 mem_used=$(( $mem_total - (($page_size * ($free_pages + $file_pages)) / 1024.0 ** 3) ))
 mem_used_percent=$(( 100 * $mem_used / $mem_total ))
-ram="$(progress_bar $MONOKAI_GREEN $mem_used $mem_total) $(printf "%.1f GiB / %d GiB (%d%%)" $mem_used $mem_total $mem_used_percent)"
+ram="$(progress_bar $MONOKAI_GREEN $mem_used $mem_total)  $gray$(printf "%4.1f GiB / %4d GiB (%3d%%)" $mem_used $mem_total $mem_used_percent)"
 
 read disk_used disk_total disk_percent <<< $(df -h | head -2 | tail -1 | awk '{gsub(/G/, "", $3); gsub(/G/, "", $2); print $3, $2, $5}')
-disk="$(progress_bar $MONOKAI_BLUE $disk_used $disk_total) $disk_used GiB / $disk_total GiB ($disk_percent)"
-
-normal=$(tput sgr0 2>/dev/null)
-textColor="\033[38;5;39m"
+disk="$(progress_bar $MONOKAI_BLUE $disk_used $disk_total)  $gray$(printf "%4d GiB / %4d GiB (%4s)" $disk_used $disk_total $disk_percent)"
 
 echo -e "
 
-                           ${textColor}    User: ${normal}${user}
-                           ${textColor} Session: ${normal}$shell @ ${terminal}
-                           ${textColor}Hostname: ${normal}${hostname}
-                           ${textColor}     WAN: ${normal}${ip}
 
-                           ${textColor}      OS: ${normal}${distro}
-                           ${textColor}     CPU: ${normal}${cpu}
-                           ${textColor}  Uptime: ${normal}${uptime}
+                             ${blue}\e[3mWelcome to ${distro}, up ${uptime}${reset}
 
-                           ${textColor}  Memory: ${normal}${ram}
-                           ${textColor}    Disk: ${normal}${disk}
-                           ${textColor} Battery: ${normal}${battery}
+                             ${blue}Username  ${reset}${user}
+                             ${blue}Hostname  ${reset}${hostname}
+                             ${blue}Session   ${reset}$shell @ ${terminal}
+                             ${blue}WAN-IP    ${reset}${ip}
+
+                             ${blue}Memory    ${reset}${ram}
+                             ${blue}Disk      ${reset}${disk}
+                             ${blue}Battery   ${reset}${battery}
+
 "
