@@ -33,7 +33,7 @@ function imgcat_small() { imgcat "$1" | sed 's/inline=1/inline=1;width=256px/'; 
 # Use brew's nano
 alias nano="/opt/homebrew/bin/nano"
 # Shortcut for ptpython (better REPL)
-alias py="PYTHONPATH=. python -m ptpython"
+alias py="ptpython"
 # Git shortcuts
 alias gcm="git checkout master"
 alias gp="git pull"
