@@ -5,7 +5,7 @@ Very customized macOS setup for Macbooks.
 ## Features:
 
 - Use easily editable config files to automatically:
-    - Install of a host of [applications and tools](config/packages.yaml)
+    - Install of a host of [applications and tools](config/packages.yaml) from Homebrew and the Mac App Store
     - Manage the [Dock](config/dock.yaml) and and set [custom icons](config/icons.yaml):
 
         ![](resources/dock.png)

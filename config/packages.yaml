@@ -9,6 +9,7 @@ packages:
     - git-delta
     - grep
     - jenv
+    - mas
     - nano
     - ncdu
     - poetry
@@ -61,12 +62,14 @@ packages:
     # Fonts
     - font-iosevka-ss10
 
+  app_store:
+    - "928941247"  # OTP Manager
+    - "668208984"  # GIPHY Capture
+    - "985367838"  # Outlook
+
   manual:
     - https://filezilla-project.org/download.php?platform=macos-arm64
     - https://www.image-line.com/fl-studio-download/
-    - https://apps.apple.com/us/app/otp-manager/id928941247
-    - https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984
-    - https://apps.apple.com/us/app/microsoft-outlook/id985367838
 
   setup:
     - /Applications/Rectangle.app

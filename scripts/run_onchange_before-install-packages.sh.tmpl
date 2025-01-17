@@ -17,6 +17,15 @@ cask {{ . | quote }}
 {{ end -}}
 EOF
 
+# Mac App Store
+
+echo
+echo "---"
+echo "Install Mac App Store apps..."
+{{ range .packages.app_store -}}
+mas install {{ . }}
+{{ end -}}
+
 # Manual installs
 
 echo
