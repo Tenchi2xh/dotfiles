@@ -20,5 +20,6 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 16,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "window.zoomLevel": 0.7,
 }
