@@ -1,10 +1,5 @@
 export EDITOR="subl -w -n"
 
-# Some env inits are slow, this defers their loading asynchronously
-# so that the prompt can appear immediately on new sessions.
-# Also used in .zshrc to load slow plugins
-source ~/.local/customizations/zsh-defer.zsh
-
 # XDG environment variables
 # See https://specifications.freedesktop.org/basedir-spec/latest/
 # Some apps will follow these and avoid cluttring $HOME
@@ -17,7 +12,7 @@ export XDG_RUNTIME_DIR="$HOME/.local/runtime"
 # Paths for tools
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.jenv/bin:$PATH"
-zsh-defer eval "$(jenv init -)"
+eval "$(jenv init -)"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 

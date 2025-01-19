@@ -27,10 +27,6 @@
     type = "file"
     url = "https://github.com/Phantas0s/.dotfiles/raw/refs/heads/master/zsh/plugins/kubectl-completion/_kubectl"
 
-[".local/customizations/zsh-defer.zsh"]
-    type = "file"
-    url = "https://github.com/romkatv/zsh-defer/raw/refs/heads/master/zsh-defer.plugin.zsh"
-
 ["Library/Fonts/IosevkaKotan.ttc"]
     type = "file"
     url = "https://github.com/Tenchi2xh/IosevkaKotan/releases/download/v1.1.0/IosevkaKotan.ttc"

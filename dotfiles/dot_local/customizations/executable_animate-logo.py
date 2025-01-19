@@ -34,5 +34,5 @@ try:
         time.sleep(0.01)
 finally:
     # Show cursor
-    sys.stdout.write("\033[?25h\n")
+    sys.stdout.write("\033[?25h\n\n")
     sys.stdout.flush()

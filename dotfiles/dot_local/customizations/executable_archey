@@ -76,5 +76,4 @@ echo -e "
                              ${blue}Memory    ${reset}${ram}
                              ${blue}Disk      ${reset}${disk}
                              ${blue}Battery   ${reset}${battery}
-
 "

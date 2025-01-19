@@ -1,0 +1,72 @@
+$schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+version: 3
+final_space: true
+
+palette:
+  white: "15"
+  gray: "239"
+  dark_gray: "234"
+  black: "0"
+  cyan: "39"
+  bright_cyan: "45"
+  light_cyan: "159"
+  yellow: "11"
+
+blocks:
+
+- type: prompt
+  alignment: right
+
+  segments:
+  - type: path
+    foreground: p:gray
+    template: "{{ .Path }}"
+    properties:
+      style: full
+      mapped_locations_enabled: false
+
+- type: prompt
+  alignment: left
+  newline: true
+
+  segments:
+  - type: time
+    style: diamond
+    leading_diamond: ""
+    trailing_diamond: ""
+    foreground: p:gray
+    background: p:dark_gray
+    template: " {{ .CurrentDate | date .Format }} "
+    properties:
+      time_format: 15:04
+
+  - type: session
+    style: powerline
+    powerline_symbol: 
+    foreground: p:cyan
+    background: p:gray
+    template: " {{ .UserName }} "
+
+  - type: path
+    style: powerline
+    powerline_symbol: 
+    foreground: p:black
+    background: p:cyan
+    template: " {{ .Path }} "
+    properties:
+      style: folder
+
+  - type: git
+    style: powerline
+    powerline_symbol: 
+    foreground: p:black
+    background: p:bright_cyan
+    template: " {{ .Ref}} "
+
+  - type: git
+    style: powerline
+    powerline_symbol: 
+    foreground: p:light_cyan
+    background: p:light_cyan
+    # \e[D moves the cursor left once to make a very thin powerline section
+    template: "{{ if .Working }}.\e[D{{ end }}"

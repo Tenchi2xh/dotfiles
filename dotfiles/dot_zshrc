@@ -7,7 +7,14 @@ SAVEHIST=10000
 
 source ~/.local/customizations/colors.zsh
 source ~/.local/customizations/shortcuts.zsh
-source ~/.local/customizations/prompt.zsh
 
-zsh-defer source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-zsh-defer source ~/.local/customizations/completion.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.local/customizations/completion.zsh
+
+source ~/.local/customizations/transient.zsh
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config ~/.local/customizations/tenchi.omp.yaml)"
+  preexec_functions+=(transient_pre)
+  precmd_functions+=(transient_post)
+fi
