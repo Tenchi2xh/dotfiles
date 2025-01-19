@@ -34,6 +34,9 @@ export JENV_ROOT="$HOME/.config/.jenv"
 
 # Run animation and archey
 if [ -n "$PS1" ]; then
-    ~/.local/customizations/archey
-    python3 ~/.local/customizations/animate-logo.py
+    terminal_height=$(tput lines)
+    if [ "$terminal_height" -gt 16 ]; then
+        ~/.local/customizations/archey
+        python3 ~/.local/customizations/animate-logo.py
+    fi
 fi
