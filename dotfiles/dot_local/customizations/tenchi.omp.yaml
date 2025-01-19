@@ -15,7 +15,6 @@ palette:
 
 # TODO:
 # - Adjust colors
-# - Secondary prompt
 
 blocks:
 
@@ -91,3 +90,7 @@ blocks:
   - type: text
     foreground: p:cyan
     template: "\n ❱ "
+
+secondary_prompt:
+  foreground: p:cyan
+  template: " ❱❱ "

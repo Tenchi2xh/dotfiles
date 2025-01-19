@@ -10,9 +10,20 @@ function transient() {
     clear+="\e[A\e[2K"
   done
 
-  # TODO: manually colorize $1
+  # TODO: manually colorize line ($1)
+
   echo -ne "$clear\e[2A\e[2K\e[G \e[38;5;39m❱\e[0m  "
-  echo $ZSH_HIGHLIGHT_LAST_BUFFER_HIGHLIGHTED
+
+  local first_line=true
+  while IFS= read -r line; do
+    if $first_line; then
+      echo "$line" 
+      first_line=false
+    else
+      echo " \e[38;5;39m❱❱\e[0m $line"
+    fi
+  done <<< "$1"
+
   if [[ -n "${1//[[:space:]]/}" ]]; then
     echo
   fi 
