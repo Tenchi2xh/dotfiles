@@ -10,17 +10,15 @@ function transient() {
     clear+="\e[A\e[2K"
   done
 
-  # TODO: manually colorize line ($1)
-
-  echo -ne "$clear\e[2A\e[2K\e[G \e[38;5;39m❱\e[0m  "
+  echo -ne "$clear\e[2A\e[2K\e[G \e[38;5;39m❱  "
 
   local first_line=true
   while IFS= read -r line; do
     if $first_line; then
-      echo "$line" 
+      echo "$line\e[0m" 
       first_line=false
     else
-      echo " \e[38;5;39m❱❱\e[0m $line"
+      echo " \e[38;5;39m❱❱ $line\e[0m"
     fi
   done <<< "$1"
 

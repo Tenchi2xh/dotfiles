@@ -497,6 +497,8 @@
 	<true/>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>JiggleTTYSizeOnClearBuffer</key>
+	<true/>
 	<key>JobName</key>
 	<true/>
 	<key>KillJobsInServersOnQuit</key>
@@ -999,7 +1001,7 @@
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>0.87</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>

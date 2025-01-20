@@ -8,6 +8,8 @@ alias tree="tree -CF --dirsfirst"
 alias grep="grep --color=auto"
 # Redefine cmatrix
 alias cmatrix="cmatrix -abs"
+# Redefine tldr
+alias tldr="tldr -q"
 
 # Create directories and cd to them
 function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }

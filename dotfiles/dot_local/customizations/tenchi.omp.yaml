@@ -9,7 +9,7 @@ palette:
   dark_gray: "234"
   black: "0"
   cyan: "39"
-  bright_cyan: "45"
+  bright_cyan: "81"
   light_cyan: "159"
   yellow: "11"
 
@@ -28,7 +28,7 @@ blocks:
     template: "{{ if gt .PromptCount 1 }} ❰  {{ end }}"
 
   - type: status
-    template: "{{ if gt .PromptCount 1 }}∴ {{ .Code }}{{ end }}"
+    template: "{{ if gt .PromptCount 1 }}∴ {{ .Code }}{{ if ne (reason .Code) (toString .Code) }} = {{ lower (reason .Code) }}{{ end }}{{ end }}"
     foreground_templates:
     - "{{ if .Error }}204{{ end }}"
     - "{{ if not .Error }}150{{ end }}"

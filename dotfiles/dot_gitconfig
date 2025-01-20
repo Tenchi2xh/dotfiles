@@ -35,6 +35,8 @@
     lg = "log --color --graph --pretty=format:'%C(#ffd866)%h%Creset - %C(#ab9df2)<%an>%Creset %s %C(#a9dc76)(%cr)%Creset%C(#78dce8)%d%Creset' --abbrev-commit"
     sdiff = diff --staged
 
+# https://code.googlesource.com/git/+/refs/tags/v2.22.4/Documentation/config/color.txt
+
 [color.status]
     changed = "#ffd866"
     added = "#a9dc76"
@@ -45,3 +47,12 @@
     current = "brightwhite"
     remote = "#78dce8"
     upstream = "#ab9df2"
+
+[color.transport]
+    rejected = "#ff6188"
+
+[color.advice]
+    hint = "#ffd866"
+
+[color.push]
+    error = "#ff6188"
