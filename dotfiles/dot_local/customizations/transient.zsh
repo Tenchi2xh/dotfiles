@@ -4,27 +4,12 @@ last_cmd="nonempty"
 
 function transient() {
   local lines=$(echo "$1" | wc -l)
-  local clear=""
-
-  for ((i = 1; i <= lines; i++)); do
-    clear+="\e[A\e[2K"
-  done
-
-  echo -ne "$clear\e[2A\e[2K\e[G \e[38;5;39m❱  "
-
-  local first_line=true
-  while IFS= read -r line; do
-    if $first_line; then
-      echo "$line\e[0m" 
-      first_line=false
-    else
-      echo " \e[38;5;39m❱❱ $line\e[0m"
-    fi
-  done <<< "$1"
+  lines=$(( lines + 2 ))
+  echo -ne "\e[${lines}A\e[2K\e[38;5;236m${(l:COLUMNS::─:)}\e[0m\e[${lines}B"
 
   if [[ -n "${1//[[:space:]]/}" ]]; then
     echo
-  fi 
+  fi
 }
 
 function transient_pre() {

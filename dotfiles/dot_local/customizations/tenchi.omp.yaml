@@ -93,4 +93,4 @@ blocks:
 
 secondary_prompt:
   foreground: p:cyan
-  template: " ❱❱ "
+  template: " ❱❱   "
