@@ -69,4 +69,6 @@ blocks:
     foreground: p:light_cyan
     background: p:light_cyan
     # \e[D moves the cursor left once to make a very thin powerline section
-    template: "{{ if .Working }}.\e[D{{ end }}"
+    template: "{{ if or (.Staging.Changed) (.Working.Changed) }}.\e[D{{ end }}"
+    properties:
+      fetch_status: true

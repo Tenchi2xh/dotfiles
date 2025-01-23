@@ -3,6 +3,7 @@ version: 3
 final_space: true
 
 palette:
+
   white: "15"
   light_gray: "244"
   gray: "239"
@@ -13,9 +14,6 @@ palette:
   light_cyan: "159"
   yellow: "11"
 
-# TODO:
-# - Adjust colors
-
 blocks:
 
 - type: prompt
@@ -23,6 +21,7 @@ blocks:
   newline: true
 
   segments:
+
   - type: text
     foreground: p:gray
     template: "{{ if gt .PromptCount 1 }} ❰  {{ end }}"
@@ -46,13 +45,12 @@ blocks:
   newline: true
 
   segments:
-  # - type: time
-  #   style: powerline
-  #   foreground: p:light_gray
-  #   background: p:dark_gray
-  #   template: " {{ .CurrentDate | date .Format }} "
-  #   properties:
-  #     time_format: 15:04
+
+  - type: path
+    style: plain
+    template: "{{ if .Env.ITERM_SESSION_ID }}\e]0;{{ .Path }}\a{{ end }}"
+    properties:
+      style: folder
 
   - type: path
     style: diamond
@@ -62,8 +60,6 @@ blocks:
     template: " {{ .Path }} "
     properties:
       style: full
-      # style: agnoster_short
-      # max_depth: 3
       hide_root_location: true
 
 
@@ -77,10 +73,12 @@ blocks:
   - type: git
     style: diamond
     trailing_diamond: 🭬
-    foreground: p:light_cyan
+    foreground: p:black
     background: p:light_cyan
-    # \e[D moves the cursor left once to make a very thin powerline section
-    template: "{{ if .Working }}*\e[D{{ end }}"
+    # \e[D moves the cursor left once to make a very thin powerline section 
+    template: "{{ if or (.Staging.Changed) (.Working.Changed) }}*\e[D{{ end }}"
+    properties:
+      fetch_status: true
 
 - type: prompt
   alignment: left
