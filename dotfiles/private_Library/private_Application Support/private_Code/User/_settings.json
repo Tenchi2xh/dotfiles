@@ -1,6 +1,7 @@
 {
     "editor.fontFamily": "Iosevka Kotan",
     "editor.fontSize": 14,
+    "editor.fontLigatures": true,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
@@ -23,4 +24,7 @@
     "workbench.tree.renderIndentGuides": "always",
     "window.zoomLevel": 0.7,
     "python.defaultInterpreterPath": "python3",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.typeCheckingMode": "standard",
 }

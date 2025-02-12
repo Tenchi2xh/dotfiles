@@ -2,6 +2,11 @@
 #   osascript -e 'id of app "Sublime Text"'
 
 associations:
+
+- bundle: com.colliderli.iina
+  extensions:
+  - ["mp4", "mov", "mkv"]
+
 - bundle: com.sublimetext.4
   extensions:
   # Plain text

@@ -62,3 +62,5 @@ alias pythc="~/Development/pyth/run_pyth.py"
 alias pythd="pythc -d"
 # Removes all scala cache files
 alias scalaclean="find . -name "target" -type d | xargs rm -rf"
+# Copy pwd to clipboard
+alias ppwd="pwd | pbcopy"

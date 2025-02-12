@@ -346,6 +346,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>CustomScriptsFolder</key>
+	<string>/Users/tenchi/.config/iterm</string>
 	<key>Default Arrangement Name</key>
 	<string>Arrangement 1</string>
 	<key>Default Bookmark Guid</key>
@@ -356,7 +358,11 @@
 	<true/>
 	<key>DimOnlyText</key>
 	<true/>
+	<key>DisableCustomBoxDrawing</key>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
+	<true/>
+	<key>EnableAPIServer</key>
 	<true/>
 	<key>FlashTabBarInFullscreen</key>
 	<false/>
@@ -1012,8 +1018,12 @@
 			<string>/Users/tenchi</string>
 		</dict>
 	</array>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
 	<key>OpenBookmark</key>
 	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<true/>
 	<key>OpenUntitledFile</key>
 	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -1076,6 +1086,8 @@
 	<key>TabsHaveCloseButton</key>
 	<true/>
 	<key>UseBorder</key>
+	<false/>
+	<key>UseCustomScriptsFolder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>

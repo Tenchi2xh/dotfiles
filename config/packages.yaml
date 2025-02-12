@@ -13,6 +13,7 @@ packages:
     - mas
     - nano
     - ncdu
+    - pipx
     - poetry
     - ptpython
     - pygments
