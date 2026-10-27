@@ -1,16 +1,19 @@
 packages:
   brews:
+    # Some of these are used in configs.
+    # For example, oh-my-posh is used by the zsh configuration.
+    # Entries can be removed if some features will not be used.
+    # Removing these entries should not crash the dotfile scripts,
+    # but some commands and tools will not work at runtime.
     - ansifilter
     - bitwarden-cli
     - cmatrix
     - coreutils
-    - duti
     - git
     - git-delta
     - grep
     - jandedobbeleer/oh-my-posh/oh-my-posh
     - jenv
-    - mas
     - nano
     - ncdu
     - pipx
@@ -22,8 +25,11 @@ packages:
     - tree
     - wget
     - yt-dlp
-    - zero-sh/tap/apply-user-defaults
     - zsh-syntax-highlighting
+    # Used directly by dotfiles scripts, don't remove
+    - mas
+    - duti
+    - zero-sh/tap/apply-user-defaults
 
   casks:
     # Apps
@@ -44,6 +50,7 @@ packages:
     - monodraw
     - obsidian
     - postman
+    - rancher
     - slack
     - steam
     - sublime-text
@@ -61,15 +68,19 @@ packages:
     # For dual GPU Macs (pre-M1)
     # - gfxcardstatus
 
+  # Set to `app_store: []`  if everything is unwanted
   app_store:
     - "928941247"  # OTP Manager
     - "668208984"  # GIPHY Capture
     - "985367838"  # Outlook
 
+  # Set to `manual: []`  if everything is unwanted
   manual:
     - https://filezilla-project.org/download.php?platform=macos-arm64
     - https://www.image-line.com/fl-studio-download/
 
+  # Synchronize those with the installed casks and extensions
+  # The install scripts will prompt the user to configure some specific settings for each one
   setup:
     - /Applications/Rectangle.app
     - /Applications/Hidden Bar.app

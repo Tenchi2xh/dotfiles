@@ -8,7 +8,7 @@ source ${CHEZMOI_WORKING_TREE}/util/confirm.sh
 echo
 echo "---"
 echo "Installing brew packages..."
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --verbose --file=/dev/stdin <<EOF
 {{ range .packages.brews -}}
 brew {{ . | quote }}
 {{ end -}}

@@ -2,6 +2,7 @@ sublime:
   packages:
     - A File Icon
     - Alignment
+    - ayu
     - Calculate
     - Crontab
     - Cython+
@@ -11,7 +12,6 @@ sublime:
     - Indent XML
     - Jade
     - Less
-    - Material Theme
     - MarkdownEditing
     - MarkdownTOC
     - MIPS Syntax
@@ -31,3 +31,4 @@ sublime:
     - TodoReview
     - TOML
     - TypeScript
+    - WrapAsYouType
