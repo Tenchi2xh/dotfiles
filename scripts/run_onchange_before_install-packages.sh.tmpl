@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-source ${CHEZMOI_WORKING_TREE}/util/confirm.sh 
+source ${CHEZMOI_WORKING_TREE}/util/confirm.sh
 
 # Brew package managment
 
@@ -46,7 +46,7 @@ if [[ "yes" == $(confirm "Do you want to configure extensions?") ]]; then
     echo "Note: For SwitchResX, click the icon, make sure the helper is installed and launch the daemon."
     {{ range .packages.setup -}}
     open {{ . | quote }}
-    read -p "- Press enter when {{ . | quote }} has been configured..."
+    read -p "- Press enter when {{ . }} has been configured..."
     {{ end -}}
     echo "Manual configurations done."
 fi
