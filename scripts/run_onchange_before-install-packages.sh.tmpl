@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-source ${CHEZMOI_WORKING_TREE}/util/confirm.sh 
+source ${CHEZMOI_WORKING_TREE}/util/confirm.sh
 
 # Brew package managment
 
@@ -19,12 +19,12 @@ EOF
 
 # Mac App Store
 
-echo
-echo "---"
-echo "Install Mac App Store apps..."
-{{ range .packages.app_store -}}
-mas install {{ . }}
-{{ end -}}
+# echo
+# echo "---"
+# echo "Install Mac App Store apps..."
+# {{ range .packages.app_store -}}
+# mas install {{ . }}
+# {{ end -}}
 
 # Manual installs
 
