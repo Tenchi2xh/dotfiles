@@ -56,7 +56,7 @@ packages:
     # - steam
     - sublime-text
     - visual-studio-code
-    - whatsapp
+    # - whatsapp
 
     # Extensions
     # - karabiner-elements
