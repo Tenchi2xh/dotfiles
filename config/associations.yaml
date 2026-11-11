@@ -10,7 +10,7 @@ associations:
 - bundle: com.sublimetext.4
   extensions:
   # Plain text
-  - ["public.plain-text", "public.content", ".txt"]
+  - ["public.plain-text", ".txt"]
   # Config files
   - [".ini", ".conf", ".env"]
   # Build and project files
