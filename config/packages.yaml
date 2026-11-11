@@ -63,7 +63,7 @@ packages:
     - keepingyouawake
     - linearmouse
     - rectangle
-    - switchresx
+    # - switchresx
     - hiddenbar
     - topnotch
     # For dual GPU Macs (pre-M1)
@@ -88,4 +88,4 @@ packages:
     - /Applications/KeepingYouAwake.app
     - /Applications/LinearMouse.app
     - /Applications/TopNotch.app
-    - ~/Library/PreferencePanes/SwitchResX.prefPaneSwitchResX
+    # - ~/Library/PreferencePanes/SwitchResX.prefPaneSwitchResX
