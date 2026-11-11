@@ -2,7 +2,7 @@ dock:
   # Development
   - iTerm
   - Sublime Text
-  - IntelliJ IDEA CE
+  # - IntelliJ IDEA CE
   - Visual Studio Code
   - Monodraw
   - Hex Fiend
@@ -12,11 +12,11 @@ dock:
   # Browsers
   - Google Chrome
   - Firefox
-  - FileZilla
+  # - FileZilla
   - spacer
 
   # Communication
-  - Discord
+  # - Discord
   - Slack
   - WhatsApp
   - Microsoft Teams
@@ -26,20 +26,20 @@ dock:
   # Productivity
   - Affinity Photo 2
   - Affinity Designer 2
-  - Obsidian
+  # - Obsidian
   - IINA
-  - Blender
-  - FL Studio 2024
-  - Audacity
+  # - Blender
+  # - FL Studio 2024
+  # - Audacity
   - Inkscape
   - spacer
 
   # Hobby
-  - Music
-  - KaTrain
-  - Majsoul Plus
-  - Steam
-  - spacer
+  # - Music
+  # - KaTrain
+  # - Majsoul Plus
+  # - Steam
+  # - spacer
 
   # System
   - Bitwarden

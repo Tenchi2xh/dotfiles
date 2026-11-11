@@ -35,30 +35,31 @@ packages:
     # Apps
     - affinity-designer
     - affinity-photo
-    - audacity
+    # - audacity
     - bitwarden
-    - blender
-    - discord
+    - google-chrome
+    # - blender
+    # - discord
     - firefox
     - hex-fiend
     - iina
     - inkscape
-    - intellij-idea-ce
+    # - intellij-idea-ce
     - iterm2
-    - katrain
-    - majsoul-plus
+    # - katrain
+    # - majsoul-plus
     - monodraw
-    - obsidian
+    # - obsidian
     - postman
-    - rancher
+    # - rancher
     - slack
-    - steam
+    # - steam
     - sublime-text
     - visual-studio-code
     - whatsapp
 
     # Extensions
-    - karabiner-elements
+    # - karabiner-elements
     - keepingyouawake
     - linearmouse
     - rectangle
@@ -71,13 +72,13 @@ packages:
   # Set to `app_store: []`  if everything is unwanted
   app_store:
     - "928941247"  # OTP Manager
-    - "668208984"  # GIPHY Capture
-    - "985367838"  # Outlook
+    # - "668208984"  # GIPHY Capture
+    # - "985367838"  # Outlook
 
   # Set to `manual: []`  if everything is unwanted
-  manual:
-    - https://filezilla-project.org/download.php?platform=macos-arm64
-    - https://www.image-line.com/fl-studio-download/
+  manual: []
+    # - https://filezilla-project.org/download.php?platform=macos-arm64
+    # - https://www.image-line.com/fl-studio-download/
 
   # Synchronize those with the installed casks and extensions
   # The install scripts will prompt the user to configure some specific settings for each one
