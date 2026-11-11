@@ -70,8 +70,7 @@ blocks:
     trailing_diamond: 🭬
     foreground: p:black
     background: p:light_cyan
-    template: "{{ if or (.Staging.Changed) (.Working.Changed) }}{{ end }}"
-    force: true
+    template: "{{ if or (.Staging.Changed) (.Working.Changed) }}\u200d{{ end }}"
     properties:
       fetch_status: true
 
